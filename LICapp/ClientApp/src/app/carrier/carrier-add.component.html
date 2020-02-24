@@ -1,0 +1,49 @@
+
+
+
+
+<div class="container" style="border:thin">
+
+  <form #carrieradd='ngForm' (ngSubmit)="Register(carrieradd)" class="form-horizontal" style="width:50%">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="businessname">Bussiness Name:</label>
+      <div class="col-sm-10">
+        <input style="width:50%" type="text" class="form-control"
+               width="50%" id="businessname" placeholder="Enter business name"
+               name="businessname" businessname required [(ngModel)]='objCar.bussiness_Name' #bussiness_Name="ngModel">
+        <!--<span class="help-bpx" *ngIf="businessname.touched && !businessname.valid ">Required</span>-->
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Bussiness Address:</label>
+      <div class="col-sm-10">
+        <input style="width:50%" required type="text" class="form-control" width="50%"
+               id="address" placeholder="Enter address" name="address" lastname required [(ngModel)]='objCar.bussiness_Address' #bussiness_Address="ngModel">
+        <!--<span class="help-bpx" *ngIf="address.touched && !address.valid ">Required</span>-->
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Gender">Bussiness Phone Number</label>
+      <div class="col-sm-10">
+        <input style="width:50%" required type="text" class="form-control" width="50%"
+               id="phone" placeholder="Enter phone" name="phone" lastname required [(ngModel)]='objCar.bussiness_Phone_Number' #bussiness_Phone_Number="ngModel">
+        <!--<span class="help-bpx" *ngIf="phone.touched && !phone.valid ">Required</span>-->
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="property">Bussiness property</label>
+      <div class="col-sm-10">
+        <input style="width:50%" required type="text" class="form-control" width="50%"
+               id="property" placeholder="Enter property" name="property" lastname required [(ngModel)]='objCar.myProperty' #myProperty="ngModel">
+        <!--<span class="help-bpx" *ngIf="property.touched && !property.valid ">Required</span>-->
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button id="btnsubmit" type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+<button style="display:none" type="button" #closeBtn class="btn btn-default" data-dismiss="modal">Close</button>
